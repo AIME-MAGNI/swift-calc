@@ -24,6 +24,7 @@ body {
 .all-btns {
     display: flex;
     flex-direction: row;
+
 }
 
 
@@ -40,4 +41,16 @@ body {
 button {
     width: 90px;
     height: 45px;
+    font-size: 18px;
+    width: 70px;
+    cursor: pointer;
+}
+
+
+.equal-btn {
+    background-color: #2ecc71;
+}
+
+.clear-btn {
+    background-color: #e74c3c;
 }
