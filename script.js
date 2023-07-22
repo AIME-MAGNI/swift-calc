@@ -21,9 +21,10 @@ function calculate() {
 }
 
 function clearDisplay() {
-    currentValue = ''
     let resultDisplay = document.querySelector(".result-display");
     let operationDisplay = document.querySelector(".operation-display");
-    resultDisplay.textContent = currentValue
-    operationDisplay.textContent = currentValue
+    resultDisplay.textContent = ''
+    operationDisplay.textContent = ''
+    currentValue = '';
+    currentOperator = '';
 }
