@@ -25,6 +25,6 @@ function clearDisplay() {
     let operationDisplay = document.querySelector(".operation-display");
     resultDisplay.textContent = ''
     operationDisplay.textContent = ''
-    currentValue = '';
-    currentOperator = '';
+    currentValue = ''
+    currentOperator = ''
 }
