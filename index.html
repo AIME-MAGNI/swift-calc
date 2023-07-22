@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <div class="title">
+        <h2>Calculator</h2>
+    </div>
+
+    <div class="container">
+
+        <div class="screen-rectangle">
+            <h2 class="operation-display"></h2>
+            <h3 class="result-display"></h3>
+        </div>
+
+        <div class="all-btns">
+
+            <div class="nber-btns">
+                <button class="one-btn" onclick="updateDisplay(this)">1</button>
+                <button class="two-btn" onclick="updateDisplay(this)">2</button>
+                <button class="three-btn" onclick="updateDisplay(this)">3</button>
+                <button class="four-btn" onclick="updateDisplay(this)">4</button>
+                <button class="five-btn" onclick="updateDisplay(this)">5</button>
+                <button class="six-btn" onclick="updateDisplay(this)">6</button>
+                <button class="seven-btn" onclick="updateDisplay(this)">7</button>
+                <button class="eight-btn" onclick="updateDisplay(this)">8</button>
+                <button class="nine-btn" onclick="updateDisplay(this)">9</button>
+                <button class="zero-btn" onclick="updateDisplay(this)">0</button>
+                <button class="equal-btn" onclick="calculate()">=</button>
+                <button class="clear-btn" onclick="clearDisplay()">C</button>
+            </div>
+
+            <div class="ops-btns">
+                <button class="add-btn" onclick="setOperator(this)">+</button>
+                <button class="subtract-btn" onclick="setOperator(this)">-</button>
+                <button class="divide-btn" onclick="setOperator(this)">/</button>
+                <button class="mult-btn" onclick="setOperator(this)">*</button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+        currentValue = ''
+        function updateDisplay(clickedButton) {
+            let operationDisplay = document.querySelector(".operation-display");
+            currentValue += clickedButton.textContent
+            operationDisplay.textContent = currentValue
+        }
+
+
+    </script>
+</body>
+
+</html>
