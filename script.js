@@ -1,30 +1,37 @@
-currentValue = ''
-currentOperator = ''
+let currentOperation = '';
+let currentResult = '';
+let currentOperator = '';
 
-function updateDisplay(clickedButton) {
-    let operationDisplay = document.querySelector(".operation-display");
-    currentValue += clickedButton.textContent
-    operationDisplay.textContent = currentValue
+function updateDisplay(button) {
+    const value = button.innerText;
+    currentOperation += value;
+    updateScreen();
 }
 
-function setOperator(clickedButton) {
-    let operationDisplay = document.querySelector(".operation-display");
-    currentOperator = clickedButton.textContent
-    currentValue += currentOperator
-    operationDisplay.textContent = currentValue
+function updateScreen() {
+    const screenDisplay = document.querySelector('.operation-display');
+    screenDisplay.textContent = currentOperation;
 }
 
 function calculate() {
-    let resultDisplay = document.querySelector(".result-display");
-    results = eval(currentValue)
-    resultDisplay.textContent = results
+    currentResult = eval(currentOperation);
+    currentOperation = currentResult.toString();
+    updateScreen();
 }
 
 function clearDisplay() {
-    let resultDisplay = document.querySelector(".result-display");
-    let operationDisplay = document.querySelector(".operation-display");
-    resultDisplay.textContent = ''
-    operationDisplay.textContent = ''
-    currentValue = ''
-    currentOperator = ''
+    currentOperation = '';
+    currentResult = '';
+    updateScreen();
+}
+
+function setOperator(button) {
+    currentOperator = button.innerText;
+    currentOperation += currentOperator;
+    updateScreen();
+}
+
+function backspace() {
+    currentOperation = currentOperation.slice(0, -1);
+    updateScreen();
 }

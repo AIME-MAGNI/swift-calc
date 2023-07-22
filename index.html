@@ -7,6 +7,87 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <title>Calculator</title>
+    <style>
+        body {
+            margin-left: 300px;
+            margin-right: 200px;
+            margin-top: 80px;
+        }
+
+        .title {
+            margin-left: 250px;
+            margin-bottom: 0px;
+        }
+
+        .container {
+
+            width: 500px;
+            height: 350px;
+            border-color: black;
+            border-style: double;
+            background-color: rgb(0, 166, 255);
+            margin-left: 55px;
+            margin-bottom: 0px;
+
+        }
+
+        .all-btns {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+
+        .screen-rectangle {
+            width: 490px;
+            height: 80px;
+            border-radius: 5px;
+            background-color: aliceblue;
+            margin-bottom: 40px;
+            margin-left: 4px;
+            text-align: right;
+        }
+
+        button {
+            width: 90px;
+            height: 45px;
+            font-size: 18px;
+            width: 70px;
+            cursor: pointer;
+            margin: 2px;
+            padding: 2px;
+            /* Add a 5px padding around each button */
+            box-sizing: border-box;
+        }
+
+        .more-ops,
+        .nber-btns {
+            display: flex;
+            flex-direction: column;
+            margin-left: 45px;
+        }
+
+        .ops-btns {
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .equal-btn {
+            background-color: #2ecc71;
+        }
+
+        .backspace-btn,
+        .clear-btn {
+            background-color: #e74c3c;
+            height: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,18 +106,31 @@
         <div class="all-btns">
 
             <div class="nber-btns">
-                <button class="one-btn" onclick="updateDisplay(this)">1</button>
-                <button class="two-btn" onclick="updateDisplay(this)">2</button>
-                <button class="three-btn" onclick="updateDisplay(this)">3</button>
-                <button class="four-btn" onclick="updateDisplay(this)">4</button>
-                <button class="five-btn" onclick="updateDisplay(this)">5</button>
-                <button class="six-btn" onclick="updateDisplay(this)">6</button>
-                <button class="seven-btn" onclick="updateDisplay(this)">7</button>
-                <button class="eight-btn" onclick="updateDisplay(this)">8</button>
-                <button class="nine-btn" onclick="updateDisplay(this)">9</button>
-                <button class="zero-btn" onclick="updateDisplay(this)">0</button>
-                <button class="equal-btn" onclick="calculate()">=</button>
-                <button class="clear-btn" onclick="clearDisplay()">C</button>
+                <div class="row">
+                    <button class="one-btn" onclick="updateDisplay(this)">1</button>
+                    <button class="two-btn" onclick="updateDisplay(this)">2</button>
+                    <button class="three-btn" onclick="updateDisplay(this)">3</button>
+                </div>
+                <div class="row">
+                    <button class="four-btn" onclick="updateDisplay(this)">4</button>
+                    <button class="five-btn" onclick="updateDisplay(this)">5</button>
+                    <button class="six-btn" onclick="updateDisplay(this)">6</button>
+                </div>
+                <div class="row">
+                    <button class="seven-btn" onclick="updateDisplay(this)">7</button>
+                    <button class="eight-btn" onclick="updateDisplay(this)">8</button>
+                    <button class="nine-btn" onclick="updateDisplay(this)">9</button>
+                </div>
+                <div class="row">
+                    <button class="dot-btn" onclick="updateDisplay(this)">.</button>
+                    <button class="zero-btn" onclick="updateDisplay(this)">0</button>
+                    <button class="equal-btn" onclick="calculate()">=</button>
+                </div>
+                <div class="row">
+                    <button class="backspace-btn" onclick="backspace()">⌫</button>
+                    <button class="clear-btn" onclick="clearDisplay()">C</button>
+
+                </div>
             </div>
 
             <div class="ops-btns">
