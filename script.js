@@ -13,10 +13,15 @@ function updateScreen() {
     screenDisplay.textContent = currentOperation;
 }
 
+function showResults() {
+    const screenDisplay = document.querySelector('.result-display');
+    screenDisplay.textContent = currentOperation;
+}
+
 function calculate() {
     currentResult = eval(currentOperation);
     currentOperation = currentResult.toString();
-    updateScreen();
+    showResults();
 }
 
 function clearDisplay() {
